@@ -199,27 +199,10 @@ function getFullNames(runners) {
 
   runners.forEach(function(items){
     return fullNames.push(`${items.last_name}, ${items.first_name}`);
-  })
+  });
 
   return fullNames;
 }
-
-/*
-
-first_name, last_name
-let shirtOrder = [];
-
-// use .forEach to loop through the runners array
-// runners.forEach(item =>
-// push lastname and shirt size to new array called shirt order
-// shirtorder.push(`${item.last_name} ${item.shirt_size}`)
-
-runners.forEach(function(items){
-  return shirtOrder.push(`${items.last_name}, ${items.shirt_size}`);
-});
-
-console.log(shirtOrder);
-*/
 
 /**
  * ### Challenge `firstNamesAllCaps`
@@ -233,9 +216,19 @@ console.log(shirtOrder);
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
+  const allCaps = runners.map(function(currentValue){
+    return currentValue.first_name.toUpperCase();
+  })
+  return allCaps;
 }
+
+/*
+const newCityData = cityData.map(function(currentValue){
+  return currentValue.state.toLowerCase();
+});
+*/
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
