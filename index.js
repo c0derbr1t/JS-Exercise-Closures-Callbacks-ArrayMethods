@@ -224,12 +224,6 @@ function firstNamesAllCaps(runners) {
   return allCaps;
 }
 
-/*
-const newCityData = cityData.map(function(currentValue){
-  return currentValue.state.toLowerCase();
-});
-*/
-
 /**
  * ### Challenge `getRunnersByTShirtSize`
  * 
@@ -243,8 +237,13 @@ const newCityData = cityData.map(function(currentValue){
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
+  const tShirtArr = runners.filter(function(currentValue){
+    return currentValue.shirt_size === tShirtSize;
+  });
+
+return tShirtArr;
 }
 
 /**
