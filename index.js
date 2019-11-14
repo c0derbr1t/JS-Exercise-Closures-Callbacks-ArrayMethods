@@ -173,33 +173,10 @@ function processContains(item, list, callback) {
 */
 function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-  // .reduce, .includes
-  // let nothing = [];
-  // let noDupes = [];
-  // let dupes = list.filter(function(item, index) {
-  //   return list.indexOf(item) !== index;
-  // });
-  // for (let i=0; i<list.length; i++){
-  //   if (list.includes(dupes)){
-  //     nothing.push(list[i]);
-  //   } else {
-  //     noDupes.push(list[i]);
-  //   }
-  // }
+  let dupeFree = list.reduce((unique, item) => unique.includes(item) ? unique : [...unique,item], []);
+  return callback(dupeFree);
 
-  // return callback(noDupes);
 }
-
-/*
-  let noDupe = [];
-  list.reduce(function(list, item){
-    if (list.includes(list[item])){
-      noDupe = noDupe;
-    } else {
-      noDupe.push(list.item);
-    }
-    }, []);
-*/
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
